@@ -16,6 +16,7 @@ public class HelloWorldController {
     @GetMapping("/student")
     public Student getStudent(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName){
         return new Student(firstName, lastName);
+        //dd
     }
 
     // htttp://localhost:8080/student/김/길동
