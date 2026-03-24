@@ -7,5 +7,5 @@ spring:
         format_sql:true
 
     # 테이블 생성 후에 data.sql 실행 설정
-    defer-datasource-initialization: true
+    defer-datasource-initialization: false
 
