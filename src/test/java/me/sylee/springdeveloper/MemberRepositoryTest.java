@@ -106,4 +106,18 @@ public class MemberRepositoryTest {
         //then
         assertThat(memberRepository.findAll().size()).isZero();
     }
+
+    @Sql("/insert-member.sql")
+    @DisplayName("update Test")
+    @Test
+    void update(){
+        //given
+        Member member = memberRepository.findById(2L).get();
+        //when
+        member.changeName("syleeeee");
+        // memberRepository.save(member);
+
+        //then
+        assertThat(memberRepository.findById(2L).get().getName()).isEqualTo("syleeeee");
+    }
 }
