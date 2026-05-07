@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>안녕하세요~~~~<span th:text="${name}"></span></h1>
+    <table>
+        <tr th:each="item : ${article}">
+            <td th:text="${item.getTitle()}"></td>
+            <td th:text="${item.getContent()}"></td>
+
+        </tr>
+    </table>
+
+    <hr>
+
+        <table>
+            <ul>
+                <div th:object="${person}">
+                    <li><p th:text="|이름: *{name}|"></p></li>
+                    <li><p th:text="|나이 : *{age}|"></p></li>
+                    <li><p th:text="|아이디 : *{id}|"></p></li>
+                </div>
+                <li th:each="hobby : ${hobbies}" th:text="${hobby}">기본 텍스트</li>
+            </ul>
+        </table>
+    </hr>
+
+    <div th:if = "${error!=null}">
+        에러가 발생했습니다!!!!
+    </div>
+
+    <div th:unless="${error!=null}">
+        정상 작동 중 !!!!
+    </div>
+
+    <div th:if="${error==null}">
+        정상 작동 중 !!!!
+    </div>
+
+</body>
+</html>
