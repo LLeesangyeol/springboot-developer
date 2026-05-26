@@ -3,18 +3,18 @@ package me.sylee.springdeveloper.dto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import me.sylee.springdeveloper.dao.Article;
+import me.sylee.springdeveloper.domain.Article;
 
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
 public class AddArticleRequest {
     private String title;
     private String content;
-    public Article toEntity(){
-
-//        return new Article(title, content);
-        return Article.builder().title(title).content(content).build();
-
+    public Article toEntity() {
+        return Article.builder()
+                .title(title)
+                .content(content)
+                .build();
     }
 }

@@ -4,7 +4,7 @@ package me.sylee.springdeveloper.controller;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import me.sylee.springdeveloper.dao.Article;
+import me.sylee.springdeveloper.domain.Article;
 import me.sylee.springdeveloper.dto.ArticleResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

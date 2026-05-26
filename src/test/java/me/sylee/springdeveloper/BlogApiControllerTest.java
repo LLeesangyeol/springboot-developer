@@ -1,7 +1,7 @@
 package me.sylee.springdeveloper;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import me.sylee.springdeveloper.dao.Article;
+import me.sylee.springdeveloper.domain.Article;
 import me.sylee.springdeveloper.dto.AddArticleRequest;
 import me.sylee.springdeveloper.repository.BlogRepository;
 import org.junit.jupiter.api.BeforeEach;
