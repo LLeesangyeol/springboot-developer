@@ -28,10 +28,14 @@ public class User implements UserDetails {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "nickname")
+    private String nickname;
+
     @Builder
-    public User(String email, String password, String auth) {
+    public User(String email, String password, String nickname, String auth) {
         this.email = email;
         this.password = password;
+        this.nickname = nickname;
     }
 
     @Override

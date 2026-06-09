@@ -1,10 +1,10 @@
 package me.sylee.springdeveloper.service;
 
 import lombok.RequiredArgsConstructor;
-import me.sylee.springdeveloper.domain.User;
 import me.sylee.springdeveloper.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
+import me.sylee.springdeveloper.domain.User;
 
 @RequiredArgsConstructor
 @Service
